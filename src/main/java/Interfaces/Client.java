@@ -17,7 +17,7 @@ public class Client {
         stack = new QueueStack();
         stack.push(30);
 
-
+    InterfaceUitlity.InterfaceUtilityHelper(stack);
 
 
     }
