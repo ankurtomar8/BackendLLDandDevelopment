@@ -1,0 +1,12 @@
+package IntroToMultiThreading;
+
+public class Client {
+    public static void main(String[] args) {
+        HelloWorldPrinter helloWorldPrinter = new HelloWorldPrinter();
+
+        // runnable
+        System.out.println(Thread.currentThread().getName());
+        Thread t = new Thread(helloWorldPrinter);
+        t.start();
+    }
+}
