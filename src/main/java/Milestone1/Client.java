@@ -1,5 +1,7 @@
 package Milestone1;
 
+import Milestone2.Inventory;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -24,6 +26,21 @@ public class Client {
         System.out.println("--------------------------------------------------------------");
         Collections.sort(items);
         for (Item item : items){
+            System.out.println(item.getName() + "  :  "+item.getPrice());
+        }
+
+        System.out.println("--------------------------------------------------------------");
+
+
+
+        System.out.println("Electronics Inventory");
+        Inventory<Electronics> electronicsInventory = new Inventory<>();
+        electronicsInventory.add(new Electronics("E1", "Laptop",999.99 ,  5 , 24));
+        electronicsInventory.add(new Electronics("E2", "Laptop",999.99 ,  5 , 24));
+        electronicsInventory.add(new Electronics("E3", "Mobile",999.99, 5, 24));
+
+        System.out.println("Items List from the Inventory : ");
+        for (Item item : electronicsInventory.getAllItems()){
             System.out.println(item.getName() + "  :  "+item.getPrice());
         }
 
