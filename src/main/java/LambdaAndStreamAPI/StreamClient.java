@@ -5,6 +5,7 @@ import org.w3c.dom.ls.LSOutput;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class StreamClient {
@@ -27,5 +28,14 @@ public class StreamClient {
                 .collect(Collectors.toUnmodifiableList());
 
         System.out.println(squareList);
+
+
+        Optional<Integer> nullList = list.stream()
+                .map(n -> n * n )
+                .sorted()
+                .distinct()
+                        .findFirst();
+
+        System.out.println(nullList);
     }
 }
